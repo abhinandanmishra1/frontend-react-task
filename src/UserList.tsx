@@ -48,7 +48,7 @@ const UserList: React.FC = () => {
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  const handlePageClick = event => {
+  const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
